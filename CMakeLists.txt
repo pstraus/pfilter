@@ -1,5 +1,5 @@
 #Set minimum version
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.26)
 
 #Project name
 project(pfilter)
