@@ -1,0 +1,7 @@
+#include <boost-modular-build-helper>
+
+
+class I_Filter
+{
+
+}
