@@ -4,7 +4,7 @@
         {
             "name": "default",
             "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-            "displayName": "Particle Filter",
+            "displayName": "Particle Filter Debug GCC",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "gcc",
@@ -14,7 +14,7 @@
         {
             "name": "gcc-release",
             "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-            "displayName": "Particle Filter",
+            "displayName": "Particle Filter Release GCC",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_C_COMPILER": "gcc",
@@ -24,7 +24,7 @@
         {
             "name": "clang-debug",
             "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-            "displayName": "Particle Filter",
+            "displayName": "Particle Filter Debug Clang",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_C_COMPILER": "clang",

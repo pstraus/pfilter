@@ -8,7 +8,8 @@
       "extensions": [
         "ms-vscode.cpptools",
         "nvidia.nsight-vscode-edition",
-        "vscodevim.vim"
+        "vscodevim.vim",
+        "ms-vscode.cmake-tools"
       ]
     }
   }

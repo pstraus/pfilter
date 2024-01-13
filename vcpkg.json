@@ -1,9 +1,6 @@
 {
     "dependencies": [
-        "boost",
-        "boost-graph",
-        "boost-ublas",
-	"cuda",
+        "cuda",
         "gtest"
     ]
 }

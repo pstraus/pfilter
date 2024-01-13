@@ -15,7 +15,7 @@ add_subdirectory(src)
 #target_include_directories(main
 #                          )
 #Note: ublas is strictly part of base boost (header-only)
-find_package(Boost 1.82.0 REQUIRED)
+#find_package(Boost 1.82.0 REQUIRED)
 
 add_executable(main)
 target_sources( main
@@ -24,11 +24,11 @@ target_sources( main
 
 target_include_directories(main
                           PRIVATE "{CMAKE_SOURCE_DIR}/include"
-                          PRIVATE ${Boost_INCLUDE_DIRS}
+                          #PRIVATE ${Boost_INCLUDE_DIRS}
                           )
                     
 target_link_libraries( main 
                        PRIVATE 
-                        Boost::boost 
+                        #Boost::boost 
                      )
 
