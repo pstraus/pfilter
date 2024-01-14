@@ -9,7 +9,8 @@
         "ms-vscode.cpptools",
         "nvidia.nsight-vscode-edition",
         "vscodevim.vim",
-        "ms-vscode.cmake-tools"
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools-extension-pack"
       ]
     }
   }
