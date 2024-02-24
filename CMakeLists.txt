@@ -2,17 +2,20 @@
 cmake_minimum_required(VERSION 3.26)
 
 #Project name
-project(pfilter
-        LANGUAGES CXX CUDA )
+project(pfilter LANGUAGES CXX CUDA )
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED)
 #set(CMAKE_CXX_FLAGS "-Wl, -Wno-undef")
 #set(CMAKE_CXX_FLAGS -lstdc++)
 
 add_subdirectory(src)
+add_subdirectory(test)
 
-find_package(Boost 1.82.0 REQUIRED)
+find_package(Eigen3 CONFIG REQUIRED)
+find_package(CUDA)
+
+set_target_properties(pfilter PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 
 add_executable(main)
 target_sources( main
@@ -26,6 +29,6 @@ target_include_directories(main
                     
 target_link_libraries( main 
                        PRIVATE 
-                        Boost::boost 
+                       Eigen3::Eigen
                      )
 
