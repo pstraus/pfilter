@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED)
 #set(CMAKE_CXX_FLAGS "-Wl, -Wno-undef")
 #set(CMAKE_CXX_FLAGS -lstdc++)
 
+add_subdirectory(kernels)
 add_subdirectory(src)
 add_subdirectory(test)
 
