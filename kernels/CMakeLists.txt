@@ -1,9 +1,10 @@
-project(kernels LANGUAGES CXX CUDA)
+project(kernels LANGUAGES CUDA)
 
 find_package(Eigen3 CONFIG REQUIRED)
 
-add_library(kernels SHARED
-            Particle.cu)
+add_library(kernels 
+            STATIC
+              Particle.cuh Particle.cu)
 
 
 target_compile_features(kernels PUBLIC cuda_std_20)
@@ -15,4 +16,5 @@ set_target_properties(kernels
 
 target_link_libraries(kernels
                       PUBLIC
-                      Eigen3::Eigen)
+                        cuda
+                        Eigen3::Eigen)

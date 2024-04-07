@@ -5,18 +5,18 @@ enable_testing()
 include(GoogleTest)
 
 find_package(Eigen3 CONFIG REQUIRED)
+find_package(CUDA)
 
 # Declare executable
 add_executable(unitTests)
 
 
 target_include_directories(unitTests
-                          PUBLIC "${CMAKE_SOURCE_DIR}/include/*")
+                          PUBLIC "${CMAKE_SOURCE_DIR}/kernels")
 
 target_sources(unitTests
-              PUBLIC
-                "TestParticle.cpp"
-                
+                PUBLIC
+                "TestParticle.cpp" 
                 )
 
 target_link_libraries(unitTests

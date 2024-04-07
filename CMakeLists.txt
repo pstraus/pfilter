@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.26)
 #Project name
 project(pfilter LANGUAGES CXX CUDA )
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED)
 #set(CMAKE_CXX_FLAGS "-Wl, -Wno-undef")
 #set(CMAKE_CXX_FLAGS -lstdc++)
