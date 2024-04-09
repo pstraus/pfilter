@@ -1,27 +1,27 @@
-project(UnitTest)
+project(UnitTestNVCC LANGUAGES CUDA)
 
 # Get GTest enabled
 enable_testing()
 include(GoogleTest)
 
 find_package(Eigen3 CONFIG REQUIRED)
-find_package(CUDA)
 
 # Declare executable
-add_executable(unitTests)
+add_executable(unitTestsNVCC)
+set_target_properties(unitTestsNVCC PROPERTIES CUDA_ARCHITECTURES native)
 
 
-target_include_directories(unitTests
+target_include_directories(unitTestsNVCC
                           PUBLIC "${CMAKE_SOURCE_DIR}/kernels")
 
-target_sources(unitTests
+target_sources(unitTestsNVCC
                 PUBLIC
-                "TestParticle.cpp" 
+                "TestParticle.cu" 
                 )
 
-target_link_libraries(unitTests
+target_link_libraries(unitTestsNVCC
                       PUBLIC Eigen3::Eigen
                       PRIVATE kernels
                       PRIVATE gtest gtest_main pthread)
 
-gtest_discover_tests(unitTests)
+gtest_discover_tests(unitTestsNVCC)

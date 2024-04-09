@@ -11,7 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED)
 
 add_subdirectory(kernels)
 add_subdirectory(src)
-add_subdirectory(test)
+#add_subdirectory(test)
+add_subdirectory(testNVCC)
 
 find_package(Eigen3 CONFIG REQUIRED)
 find_package(CUDA)
